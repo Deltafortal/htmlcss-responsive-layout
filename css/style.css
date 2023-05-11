@@ -37,9 +37,17 @@
 
 /* Generals */
 
+body {
+    font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
+
+}
+
 ul {
     list-style-type: none;
 }
+
+
 
 /* Header */
 
@@ -49,10 +57,17 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
+    align-items: center;
 
     background-color: var(--blue);
     max-height: 200px;
     padding: 20px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
 }
 
 header nav {
@@ -69,7 +84,13 @@ nav i {
     color: white;
 }
 
-
+.get-started-btn {
+    color: black;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    transform: translatey(-3px);
+}
 
 /* Jumbotron */
 
