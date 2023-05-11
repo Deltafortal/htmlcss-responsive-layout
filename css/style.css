@@ -57,11 +57,14 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
-    align-items: center;
 
     background-color: var(--blue);
     max-height: 200px;
     padding: 20px;
+}
+
+header .container {
+    align-items: center;
 }
 
 header a {
@@ -90,6 +93,7 @@ nav i {
     padding: 5px 10px;
     border-radius: 25px;
     transform: translatey(-3px);
+    
 }
 
 /* Jumbotron */
