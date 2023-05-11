@@ -8,14 +8,81 @@
 
 /* Root */
 
+:root {
+    --blue: #0084fd;
+}
+
+/* 
+BLue #0084fd
+blue card #b5ddff
+Purple #9792e4
+Gold #fdc15f
+link #8480c4
+
+480px, 576px, 768px, 992px, 1200px
+*/
+
 
 
 /* Utils */
 
+.flex {
+    display: flex;
+}
 
 
 /* Generals */
 
-body {
-    background-color: blue;
+ul {
+    list-style-type: none;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    background-color: var(--blue);
+    max-height: 200px;
+    padding: 20px;
+}
+
+header nav {
+    flex-basis: 100%;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: none;
+}
+
+nav i {
+    font-size: 35px;
+    color: white;
+}
+
+
+/****************************************************
+    R E S P O N S I V E 
+****************************************************/
+
+@media screen and (min-width: 768px) {
+    
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+    nav ul {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: none;
+    }
 }
