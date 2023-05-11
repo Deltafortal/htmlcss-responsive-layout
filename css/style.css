@@ -11,14 +11,12 @@
 :root {
     --blue: #0084fd;
     --blue-card: #b5ddff;
+    --purple: #9792e4;
+    --gold: #fdc15f;
+    --link: #8480c4;
 }
 
 /* 
-BLue #0084fd
-blue card #b5ddff
-Purple #9792e4
-Gold #fdc15f
-link #8480c4
 
 480px, 576px, 768px, 992px, 1200px
 */
@@ -81,10 +79,11 @@ nav i {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 100px;
 }
 
 
-.jumbotron .main-card,.card{
+.jumbotron .main-card, .jumbotron .card{
     background-color: var(--blue-card);
     border-radius: 25px;
     flex-basis: 90%;
@@ -98,7 +97,27 @@ nav i {
 
 
 
+/* Main: Planning Section */
 
+
+main section:nth-child(odd) {
+    background-color: var(--purple);
+}
+
+.planning .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.planning img {
+    max-width: 50%;
+}
+
+.planning .card {
+    background-color: white;
+    border-radius: 25px;
+}
 
 /****************************************************
     R E S P O N S I V E 
@@ -115,6 +134,14 @@ nav i {
     .jumbotron .card {
         flex-basis: calc((100% - 4rem) / 3)
     }
+
+
+    /* Main: Planning */
+    .planning img {
+        max-width: 80%;
+    }
+
+
 }
 
 
@@ -140,5 +167,22 @@ nav i {
 
     .main-card img {
         width: 50%;
+    }
+
+
+    /* Main: Planning */
+    .planning .container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .planning img {
+        max-width: 40%;
+    }
+
+    .planning .content, 
+    .planning .card {
+        flex-basis: 40%;
+        
     }
 }
