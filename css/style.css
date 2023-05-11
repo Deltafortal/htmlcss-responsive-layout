@@ -10,6 +10,7 @@
 
 :root {
     --blue: #0084fd;
+    --blue-card: #b5ddff;
 }
 
 /* 
@@ -28,6 +29,11 @@ link #8480c4
 
 .flex {
     display: flex;
+}
+
+.container {
+    max-width: 90vw;
+    margin: 0 auto;
 }
 
 
@@ -66,23 +72,73 @@ nav i {
 }
 
 
+
+/* Jumbotron */
+
+
+.jumbotron {
+    margin-top: 150px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.jumbotron .main-card,.card{
+    background-color: var(--blue-card);
+    border-radius: 25px;
+    flex-basis: 90%;
+}
+
+.main-card img {
+    max-width: 70%;
+    display: blocK;
+}
+
+
+
+
+
+
 /****************************************************
     R E S P O N S I V E 
 ****************************************************/
 
 @media screen and (min-width: 768px) {
-    
+
+    /* Jumbotron */
+    .jumbotron .main-card {
+        flex-basis: calc((100% - 2rem) / 2);
+        flex-grow: 1;
+    }
+
+    .jumbotron .card {
+        flex-basis: calc((100% - 4rem) / 3)
+    }
 }
 
 
 
 
 @media screen and (min-width: 1200px) {
+
+    /* Header */
     nav ul {
         display: flex;
     }
 
     .menu-btn {
         display: none;
+    }
+
+
+
+    /* Jumbotron */
+    .jumbotron .main-card {
+        display: flex;
+    }
+
+    .main-card img {
+        width: 50%;
     }
 }
